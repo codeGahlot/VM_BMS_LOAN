@@ -1,0 +1,167 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-04-22T11:31:38.500Z",
+        "line": 3,
+        "name": "Loan Application is successful",
+        "description": "",
+        "id": "apply-loan;loan-application-is-successful",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2999200,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I visit /applyloan endpoint",
+            "match": {
+              "location": "com.cognizant.BankManagementSystem.serviceTest.LoanServiceTest.i_visit_apply_endpoint()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I enter loan details",
+            "match": {
+              "location": "com.cognizant.BankManagementSystem.serviceTest.LoanServiceTest.i_enter_loan_details()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3000300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I get \"Loan Application submitted successfully!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Loan Application submitted successfully!\"",
+                  "offset": 6
+                }
+              ],
+              "location": "com.cognizant.BankManagementSystem.serviceTest.LoanServiceTest.i_get(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-04-22T11:31:38.605Z",
+        "line": 8,
+        "name": "Loan Application is unsuccessful",
+        "description": "",
+        "id": "apply-loan;loan-application-is-unsuccessful",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1018100,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I visit /applyloan endpoint",
+            "match": {
+              "location": "com.cognizant.BankManagementSystem.serviceTest.LoanServiceTest.i_visit_apply_endpoint()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I enter loan details of non eligible customer",
+            "match": {
+              "location": "com.cognizant.BankManagementSystem.serviceTest.LoanServiceTest.i_enter_loan_details_of_not_eligible_customer()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I get \"WARNING: NOT ELIGIBLE FOR LOAN\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"WARNING: NOT ELIGIBLE FOR LOAN\"",
+                  "offset": 6
+                }
+              ],
+              "location": "com.cognizant.BankManagementSystem.serviceTest.LoanServiceTest.i_get(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-04-22T11:31:38.610Z",
+        "line": 13,
+        "name": "Loan Application cannot be processed",
+        "description": "",
+        "id": "apply-loan;loan-application-cannot-be-processed",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1004400,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I visit /applyloan endpoint",
+            "match": {
+              "location": "com.cognizant.BankManagementSystem.serviceTest.LoanServiceTest.i_visit_apply_endpoint()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I enter loan details with single or multiple empty fields",
+            "match": {
+              "location": "com.cognizant.BankManagementSystem.serviceTest.LoanServiceTest.i_enter_loan_details_with_single_or_multiple_empty_fields()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I get \"WARNING: Please Enter All Fields\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"WARNING: Please Enter All Fields\"",
+                  "offset": 6
+                }
+              ],
+              "location": "com.cognizant.BankManagementSystem.serviceTest.LoanServiceTest.i_get(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Apply Loan",
+    "description": "",
+    "id": "apply-loan",
+    "keyword": "Feature",
+    "uri": "file:loan.feature",
+    "tags": []
+  }
+]

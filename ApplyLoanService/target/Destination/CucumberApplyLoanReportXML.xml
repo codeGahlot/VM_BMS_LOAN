@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="0.441">
+    <testcase classname="Apply Loan" name="Loan Application is successful" time="0.092">
+        <system-out>
+            <![CDATA[Given I visit /applyloan endpoint...........................................passed
+When I enter loan details...................................................passed
+Then I get "Loan Application submitted successfully!".......................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Apply Loan" name="Loan Application is unsuccessful" time="0.001">
+        <system-out>
+            <![CDATA[Given I visit /applyloan endpoint...........................................passed
+When I enter loan details of non eligible customer..........................passed
+Then I get "WARNING: NOT ELIGIBLE FOR LOAN".................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Apply Loan" name="Loan Application cannot be processed" time="0.001">
+        <system-out>
+            <![CDATA[Given I visit /applyloan endpoint...........................................passed
+When I enter loan details with single or multiple empty fields..............passed
+Then I get "WARNING: Please Enter All Fields"...............................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
